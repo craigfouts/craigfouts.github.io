@@ -21,8 +21,37 @@ body, html {
 	transition: .25s;
 }
 
+.drop-link {
+	text-decoration: none;
+	margin-top: 50px;
+	transition: .25s;
+}
+
+.drop-link:hover {
+	color: #666;
+}
+
+#nav-btn {
+	transition: 0.25s;
+}
+
+#nav-btn:hover {
+	color: #f00;
+}
+
 #nav-btn, #merch-link {
 	margin-right: 10px;
+}
+
+#nav-bar {
+	transition: .25s;
+}
+
+#nav-drop {
+	background-color: transparent;
+	opacity: 0;
+	pointer-events: none;
+	transition: .25s;
 }
 
 #home-link {
@@ -41,7 +70,7 @@ body, html {
 	background-attachment: fixed;
 	background-position: center;
 	background-repeat: no-repeat;
-	background-size: covoer;
+	background-size: cover;
 	min-height: 50%;
 }
 
@@ -51,7 +80,7 @@ body, html {
 	top: 0;
 	min-width: 100%;
 	min-height: 100%;
-	opacity: 0.25;
+	opacity: 0.15;
 	transition: .25s;
 }
 
@@ -71,4 +100,11 @@ body, html {
 
 #profile-desc {
 	font-size: 20px;
+}
+
+@media only screen and (max-width: 600px) {
+	#about-page {
+		padding-top: 50px;
+		margin-bottom: 0px;
+	}
 }

@@ -1,10 +1,18 @@
 window.currentLink = "home-link";
 window.highlightLink = true;
+window.showingNav = false;
 
 window.onscroll = function() {
+    var navBtn = document.getElementById("nav-btn");
+    var navDrop = document.getElementById("nav-drop");
+    navBtn.style.color = "#ccc";
+    navDrop.style.pointerEvents = "none";
+    navDrop.style.opacity = 0;
+    window.showingNav = false;
     if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
         gotoAbout()
-    } else {
+    } 
+    else {
         gotoHome()
     }
     if (window.highlightLink == true) {
@@ -19,9 +27,10 @@ function gotoHome() {
     var bannerLogo = document.getElementById("banner-logo");
     var aboutPage = document.getElementById("about-page");
     navBar.className = navBar.className.replace("w3-card", "");
-    homeLink.style.opacity = "0";
+    navBar.style.backgroundColor = "transparent";
     homeLink.style.pointerEvents = "none";
-    bannerVid.style.opacity = "0.25";
+    homeLink.style.opacity = "0";
+    bannerVid.style.opacity = "0.15";
     bannerLogo.style.opacity = "1"
     aboutPage.style.opacity = "0";
     window.currentLink = "home-link";
@@ -34,8 +43,9 @@ function gotoAbout() {
     var bannerLogo = document.getElementById("banner-logo");
     var aboutPage = document.getElementById("about-page");
     navBar.className = "w3-bar" + " w3-card";
-    homeLink.style.opacity = "1";
+    navBar.style.backgroundColor = "#000";
     homeLink.style.pointerEvents = "auto";
+    homeLink.style.opacity = "1";
     bannerVid.style.opacity = "0";
     bannerLogo.style.opacity = "0";
     aboutPage.style.opacity = "1";
@@ -44,15 +54,49 @@ function gotoAbout() {
 }
 
 function gotoPage() {
+    var navBtn = document.getElementById("nav-btn");
+    var navDrop = document.getElementById("nav-drop");
+    navBtn.style.color = "#ccc";
+    navDrop.style.pointerEvents = "none";
+    navDrop.style.opacity = "0";
     window.highlightLink = false;
+    window.showingNav = false;
 }
 
 function toggleNav() {
+    var navBtn = document.getElementById("nav-btn");
     var navDrop = document.getElementById("nav-drop");
-    if (navDrop.className.indexOf("w3-show") == -1) {
-        navDrop.className += " w3-show";
+    var bannerVid = document.getElementById("banner-vid");
+    var bannerLogo = document.getElementById("banner-logo");
+    var aboutPage = document.getElementById("about-page");
+    if (window.showingNav == true) {
+        navBtn.style.color = "#ccc";
+        navDrop.style.pointerEvents = "none";
+        navDrop.style.opacity = "0";
+        switch (window.currentLink) {
+            case "home-link":
+                bannerVid.style.opacity = "0.15";
+                bannerLogo.style.opacity = "1";
+                break;
+            case "about-link":
+                aboutPage.style.opacity = "1";
+                break;
+        }
+        window.showingNav = false;
     } else {
-        navDrop.className = navDrop.className.replace(" w3-show", "");
+        navBtn.style.color = "#666";
+        navDrop.style.pointerEvents = "auto";
+        navDrop.style.opacity = "1";
+        switch (window.currentLink) {
+            case "home-link":
+                bannerVid.style.opacity = "0";
+                bannerLogo.style.opacity = "0";
+                break;
+            case "about-link":
+                aboutPage.style.opacity = "0";
+                break;
+        }
+        window.showingNav = true;
     }
 }
 
