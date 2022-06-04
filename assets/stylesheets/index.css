@@ -21,22 +21,12 @@ body, html {
 	transition: .25s;
 }
 
-.drop-link {
-	text-decoration: none;
-	margin-top: 50px;
-	transition: .25s;
-}
-
 .drop-link:hover {
 	color: #666;
 }
 
 #nav-btn {
 	transition: 0.25s;
-}
-
-#nav-btn:hover {
-	color: #f00;
 }
 
 #nav-btn, #merch-link {
