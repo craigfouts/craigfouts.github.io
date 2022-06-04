@@ -2,6 +2,12 @@ window.currentLink = "home-link";
 window.highlightLink = true;
 window.showingNav = false;
 
+window.onload = function() {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+    gotoHome();
+}
+
 window.onscroll = function() {
     var navBtn = document.getElementById("nav-btn");
     var navDrop = document.getElementById("nav-drop");
@@ -23,32 +29,22 @@ window.onscroll = function() {
 function gotoHome() {
     var navBar = document.getElementById("nav-bar");
     var homeLink = document.getElementById("home-link");
-    var bannerVid = document.getElementById("banner-vid");
-    var bannerLogo = document.getElementById("banner-logo");
-    var aboutPage = document.getElementById("about-page");
     navBar.className = navBar.className.replace("w3-card", "");
     navBar.style.backgroundColor = "transparent";
     homeLink.style.pointerEvents = "none";
     homeLink.style.opacity = "0";
-    bannerVid.style.opacity = "0.15";
-    bannerLogo.style.opacity = "1"
-    aboutPage.style.opacity = "0";
+    setOpacity("0.15", "1", "0");
     window.currentLink = "home-link";
 }
 
 function gotoAbout() {
     var navBar = document.getElementById("nav-bar");
     var homeLink = document.getElementById("home-link");
-    var bannerVid = document.getElementById("banner-vid");
-    var bannerLogo = document.getElementById("banner-logo");
-    var aboutPage = document.getElementById("about-page");
     navBar.className = "w3-bar" + " w3-card";
     navBar.style.backgroundColor = "#000";
     homeLink.style.pointerEvents = "auto";
     homeLink.style.opacity = "1";
-    bannerVid.style.opacity = "0";
-    bannerLogo.style.opacity = "0";
-    aboutPage.style.opacity = "1";
+    setOpacity("0", "0", "1");
     window.currentLink = "about-link";
     window.highlightLink = true;
 }
@@ -59,6 +55,11 @@ function gotoPage() {
     navBtn.style.color = "#ccc";
     navDrop.style.pointerEvents = "none";
     navDrop.style.opacity = "0";
+    switch (window.currentLink) {
+        case "about-link":
+            gotoAbout();
+            break;
+    }
     window.highlightLink = false;
     window.showingNav = false;
 }
