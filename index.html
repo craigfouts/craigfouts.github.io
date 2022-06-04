@@ -22,12 +22,12 @@
             <a id="nav-btn" class="w3-bar-item w3-button w3-hide-large w3-right w3-animate-opacity" href="javascript:void(0);" onclick="toggleNav()">
                 <i class="fa fa-bars"></i>
             </a>
-            <a id="merch-link" class="nav-link w3-bar-item w3-hide-small w3-hide-medium w3-animate-opacity w3-right" href="#merch" onmouseover="highlight('merch-link')" onmouseout="reset()">MERCH</a>
-            <a id="connect-link" class="nav-link w3-bar-item w3-hide-small w3-hide-medium w3-animate-opacity w3-right" href="#connect" onmouseover="highlight('connect-link')" onmouseout="reset()">CONNECT</a>
-            <a id="publications-link" class="nav-link w3-bar-item w3-hide-small w3-hide-medium w3-animate-opacity w3-right" href="#publications" onmouseover="highlight('publications-link')" onmouseout="reset()">PUBLICATIONS</a>
-            <a id="portfolio-link" class="nav-link w3-bar-item w3-hide-small w3-hide-medium w3-animate-opacity w3-right" href="#portfolio" onmouseover="highlight('portfolio-link')" onmouseout="reset()">PORTFOLIO</a>
-            <a id="about-link" class="nav-link w3-bar-item w3-hide-small w3-hide-medium w3-animate-opacity w3-right" href="#about" onmouseover="highlight('about-link')" onmouseout="reset()" onclick="gotoAbout()">ABOUT</a>
-            <a id="home-link" class="w3-bar-item" href="#home" onclick="gotoHome()">CRAIG FOUTS</a>
+            <a id="merch-link" class="nav-link w3-bar-item w3-hide-small w3-hide-medium w3-animate-opacity w3-right" href="#merch-page" onmouseover="highlight('merch-link')" onmouseout="reset()">MERCH</a>
+            <a id="connect-link" class="nav-link w3-bar-item w3-hide-small w3-hide-medium w3-animate-opacity w3-right" href="#connect-page" onmouseover="highlight('connect-link')" onmouseout="reset()">CONNECT</a>
+            <a id="publications-link" class="nav-link w3-bar-item w3-hide-small w3-hide-medium w3-animate-opacity w3-right" href="#publications-page" onmouseover="highlight('publications-link')" onmouseout="reset()">PUBLICATIONS</a>
+            <a id="portfolio-link" class="nav-link w3-bar-item w3-hide-small w3-hide-medium w3-animate-opacity w3-right" href="#portfolio-page" onmouseover="highlight('portfolio-link')" onmouseout="reset()">PORTFOLIO</a>
+            <a id="about-link" class="nav-link w3-bar-item w3-hide-small w3-hide-medium w3-animate-opacity w3-right" href="#about-page" onmouseover="highlight('about-link')" onmouseout="reset()" onclick="gotoPage()">ABOUT</a>
+            <a id="home-link" class="w3-bar-item" href="#home-page" onclick="gotoPage()">CRAIG FOUTS</a>
         </div>
 
         <!-- Small screen -->
@@ -44,6 +44,30 @@
     </div>
     <div class="w3-center">
         <span id="banner-logo" class="w3-center w3-padding-large w3-xlarge w3-wide w3-animate-opacity">CRAIG FOUTS</span>
+    </div>
+
+    <!-- About page -->
+    <div class="w3-content w3-container w3-padding-64">
+        <div id="about-page" class="w3-row">
+            <!-- Profile image -->
+            <div class="w3-col m6 w3-center w3-padding-large">
+                <img class="w3-round w3-image" src="assets/images/profile.jpg" width="500" height="333">
+            </div>
+
+            <!-- Profile description -->
+            <div class="w3-col m6 w3-padding-large">
+                <p id="profile-desc">
+                    Welcome to my virtual resume! I am a graduate student at 
+                    Columbia University studying Applied Mathematics with a 
+                    Bachelor of Science in Computer Science and Mathematics from 
+                    The Ohio State University. My interests span the theory and 
+                    applications of dynamical systems, computational genomics, 
+                    and emergent artificial intelligence, all of which manifest 
+                    in my ongoing research with Neural Cellular Automata and 
+                    artificial life in general.
+                </p>
+            </div>
+        </div>
     </div>
 </body>
 </html>

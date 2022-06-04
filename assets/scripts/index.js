@@ -17,7 +17,7 @@ window.onscroll = function() {
         window.currentLink = "about-link";
         window.highlightLink = true;
     } else {
-        navBar.className = navbar.className.replace("w3-card", "");
+        navBar.className = navBar.className.replace("w3-card", "");
         homeLink.style.opacity = "0";
         homeLink.style.pointerEvents = "none";
         bannerVid.style.opacity = "0.25";

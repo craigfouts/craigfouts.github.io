@@ -64,7 +64,11 @@ body, html {
 
 #about-page {
 	padding-top: 150px;
-	margin-top: 125px;
+	margin-bottom: 125px;
 	opacity: 0;
 	transition: .5s;
+}
+
+#profile-desc {
+	font-size: 20px;
 }
