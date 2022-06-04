@@ -3,36 +3,47 @@
 <head>
     <meta charset="UTF-8">
     <meta name="author" content="Craig Fouts">
-    <meta name="description" content="Virtual CV and project repository">
-    <meta name="keywords" content="Craig, William, Fouts, Computer, Science, Mathematics, Math, Engineering, Student, Ohio, State, University, OSU">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-    <link rel="shortcut icon" href="assets/icons/icon.png" type="image/gif">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <meta name="description" content="My virtual CV and project repository">
+    <meta name="keywords" content="Craig, William, Fouts, Computer, Science, Engineering, Mathematics, Student, Ohio, State, University, OSU, Artificial, Life, ALIFE, Neural, Cellular, Automata">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="assets/stylesheets/index.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script src="assets/scripts/index.js"></script>
+    <link rel="shortcut icon" href="assets/icons/icon.png" type="image/gif">
     <title>Craig Fouts</title>
 </head>
 <body>
-    <!-- Nav Bar -->
-    <div class="col-sm-4">
-    <nav class="navbar">
-        <div class="container-fluid">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle minus collapsed" data-toggle="collapse" data-target="#navbarCollapse">
-                    <span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand" href="#">Craig Fouts</a>
-            </div>
-            <div class="collapse navbar-collapse" id="navbarCollapse">
-                <ul class="nav navbar-nav navbar-right">
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">Projects</a></li>
-                </ul>
-            </div>
+    <!-- Navbar -->
+    <div class="w3-top">
+        <!-- Big screen -->
+        <div class="w3-bar" id="nav-bar">
+            <a id="nav-btn" class="w3-bar-item w3-button w3-hide-large w3-right w3-animate-opacity" href="javascript:void(0);" onclick="toggleNav()">
+                <i class="fa fa-bars"></i>
+            </a>
+            <a id="merch-link" class="nav-link w3-bar-item w3-hide-small w3-hide-medium w3-animate-opacity w3-right" href="#merch" onmouseover="highlight('merch-link')" onmouseout="reset()">MERCH</a>
+            <a id="connect-link" class="nav-link w3-bar-item w3-hide-small w3-hide-medium w3-animate-opacity w3-right" href="#connect" onmouseover="highlight('connect-link')" onmouseout="reset()">CONNECT</a>
+            <a id="publications-link" class="nav-link w3-bar-item w3-hide-small w3-hide-medium w3-animate-opacity w3-right" href="#publications" onmouseover="highlight('publications-link')" onmouseout="reset()">PUBLICATIONS</a>
+            <a id="portfolio-link" class="nav-link w3-bar-item w3-hide-small w3-hide-medium w3-animate-opacity w3-right" href="#portfolio" onmouseover="highlight('portfolio-link')" onmouseout="reset()">PORTFOLIO</a>
+            <a id="about-link" class="nav-link w3-bar-item w3-hide-small w3-hide-medium w3-animate-opacity w3-right" href="#about" onmouseover="highlight('about-link')" onmouseout="reset()" onclick="gotoAbout()">ABOUT</a>
+            <a id="home-link" class="w3-bar-item" href="#home" onclick="gotoHome()">CRAIG FOUTS</a>
         </div>
-    </nav>
+
+        <!-- Small screen -->
+        <div id="nav-drop" class="w3-bar-block w3-white w3-hide w3-hide-large">
+            <!-- TODO -->
+        </div>
     </div>
-    <!-- Nav Bar -->
+
+    <!-- Home page -->
+    <div id="home-page" class="w3-display-container w3-opacity-min">
+        <video id="banner-vid" autoplay loop muted>
+            <source src="assets/videos/banner.mp4" type="video/mp4">
+        </video>
+    </div>
+    <div class="w3-center">
+        <span id="banner-logo" class="w3-center w3-padding-large w3-xlarge w3-wide w3-animate-opacity">CRAIG FOUTS</span>
+    </div>
 </body>
 </html>
