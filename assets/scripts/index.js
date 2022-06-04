@@ -64,15 +64,10 @@ function gotoPage() {
 }
 
 function toggleNav() {
-    var navBtn = document.getElementById("nav-btn");
-    var navDrop = document.getElementById("nav-drop");
     var bannerVid = document.getElementById("banner-vid");
     var bannerLogo = document.getElementById("banner-logo");
     var aboutPage = document.getElementById("about-page");
     if (window.showingNav == true) {
-        navBtn.style.color = "#ccc";
-        navDrop.style.pointerEvents = "none";
-        navDrop.style.opacity = "0";
         switch (window.currentLink) {
             case "home-link":
                 bannerVid.style.opacity = "0.15";
@@ -82,11 +77,9 @@ function toggleNav() {
                 aboutPage.style.opacity = "1";
                 break;
         }
+        closeNav()
         window.showingNav = false;
     } else {
-        navBtn.style.color = "#666";
-        navDrop.style.pointerEvents = "auto";
-        navDrop.style.opacity = "1";
         switch (window.currentLink) {
             case "home-link":
                 bannerVid.style.opacity = "0";
@@ -96,8 +89,25 @@ function toggleNav() {
                 aboutPage.style.opacity = "0";
                 break;
         }
+        openNav();
         window.showingNav = true;
     }
+}
+
+function openNav() {
+    var navBtn = document.getElementById("nav-btn");
+    var navDrop = document.getElementById("nav-drop");
+    navBtn.style.color = "#666";
+    navDrop.style.pointerEvents = "auto";
+    navDrop.style.opacity = "1";
+}
+
+function closeNav() {
+    var navBtn = document.getElementById("nav-btn");
+    var navDrop = document.getElementById("nav-drop");
+    navBtn.style.color = "#ccc";
+    navDrop.style.pointerEvents = "none";
+    navDrop.style.opacity = "0";
 }
 
 function highlight(id) {
