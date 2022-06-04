@@ -64,32 +64,13 @@ function gotoPage() {
 }
 
 function toggleNav() {
-    var bannerVid = document.getElementById("banner-vid");
-    var bannerLogo = document.getElementById("banner-logo");
-    var aboutPage = document.getElementById("about-page");
     if (window.showingNav == true) {
-        switch (window.currentLink) {
-            case "home-link":
-                bannerVid.style.opacity = "0.15";
-                bannerLogo.style.opacity = "1";
-                break;
-            case "about-link":
-                aboutPage.style.opacity = "1";
-                break;
-        }
         closeNav()
+        setOpacity("0.15", "1", "1");
         window.showingNav = false;
     } else {
-        switch (window.currentLink) {
-            case "home-link":
-                bannerVid.style.opacity = "0";
-                bannerLogo.style.opacity = "0";
-                break;
-            case "about-link":
-                aboutPage.style.opacity = "0";
-                break;
-        }
         openNav();
+        setOpacity("0", "0", "0");
         window.showingNav = true;
     }
 }
@@ -108,6 +89,21 @@ function closeNav() {
     navBtn.style.color = "#ccc";
     navDrop.style.pointerEvents = "none";
     navDrop.style.opacity = "0";
+}
+
+function setOpacity(bv, bl, ap) {
+    var bannerVid = document.getElementById("banner-vid");
+    var bannerLogo = document.getElementById("banner-logo");
+    var aboutPage = document.getElementById("about-page");
+    switch (window.currentLink) {
+        case "home-link":
+            bannerVid.style.opacity = bv;
+            bannerLogo.style.opacity = bl;
+            break;
+        case "about-link":
+            aboutPage.style.opacity = ap;
+            break;
+    }
 }
 
 function highlight(id) {
