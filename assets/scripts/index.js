@@ -65,6 +65,14 @@ function gotoPage(pg) {
     window.highlightLink = false;
     window.showingNav = false;
     page.scrollIntoView({behavior: "smooth"});
+    switch (pg) {
+        case "home-page":
+            gotoHome();
+            break;
+        case "about-page":
+            gotoAbout();
+            break;
+    }
 }
 
 function toggleNav() {
