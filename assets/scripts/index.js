@@ -4,8 +4,9 @@ window.showingNav = false;
 
 window.onload = function() {
     // window.scrollTo({top: 0, left: 0, behavior: 'smooth'});
-    var windowScroll = window.scrollY;
-    if (windowScroll > 300) {
+    var windowScroll0 = window.scrollY;
+    var windowScroll1 = window.scrollYOffset;
+    if (windowScroll0 > 300 || windowScroll1 > 300) {
         gotoAbout();
     } else {
         gotoHome();
