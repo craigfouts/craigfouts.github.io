@@ -3,8 +3,8 @@ window.highlightLink = true;
 window.showingNav = false;
 
 window.onload = function() {
-    window.location = "#home-page"
-    gotoHome();
+    var homePage = document.getElementById("home-page");
+    homePage.scrollIntoView(true);
 }
 
 window.onscroll = function() {
@@ -48,19 +48,16 @@ function gotoAbout() {
     window.highlightLink = true;
 }
 
-function gotoPage() {
+function gotoPage(pg) {
     var navBtn = document.getElementById("nav-btn");
     var navDrop = document.getElementById("nav-drop");
+    var page = document.getElementById(pg);
     navBtn.style.color = "#ccc";
     navDrop.style.pointerEvents = "none";
     navDrop.style.opacity = "0";
     window.highlightLink = false;
     window.showingNav = false;
-    switch (window.currentLink) {
-        case "about-link":
-            gotoAbout();
-            break;
-    }
+    page.scrollIntoView(true);
 }
 
 function toggleNav() {

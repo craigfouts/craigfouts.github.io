@@ -52,9 +52,9 @@ body, html {
 	transition: .25s;
 }
 
-#home-link:hover {
+/* #home-link:hover {
 	color: #f00;
-}
+} */
 
 #home-page {
 	background-attachment: fixed;
@@ -93,6 +93,10 @@ body, html {
 }
 
 @media only screen and (max-width: 600px) {
+	/* #home-link:hover {
+		color: #f00;
+	} */
+	
 	#about-page {
 		padding-top: 50px;
 		margin-bottom: 0px;
