@@ -3,16 +3,7 @@ window.highlightLink = true;
 window.showingNav = false;
 
 window.onload = function() {
-    var windowScroll = window.scrollY;
-    var homePage = document.getElementById("home-page");
-    var aboutPage = document.getElementById("about-page");
-    if (windowScroll > 300) {
-        aboutPage.scrollIntoView({behavior: "smooth"});
-        gotoAbout();
-    } else {
-        homePage.scrollIntoView({behavior: "smooth"});
-        gotoHome();
-    }
+    window.scrollTo({top: 0, left: 0, behavior: 'smooth'});
 }
 
 window.onscroll = function() {
