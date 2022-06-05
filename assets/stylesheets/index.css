@@ -96,6 +96,10 @@ body, html {
 	/* #home-link:hover {
 		color: #f00;
 	} */
+
+	#banner-vid {
+		display: none;
+	}
 	
 	#about-page {
 		padding-top: 50px;
