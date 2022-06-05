@@ -3,10 +3,7 @@ window.highlightLink = true;
 window.showingNav = false;
 
 window.onload = function() {
-    // window.scrollTo({top: 0, left: 0, behavior: 'smooth'});
-    var windowScroll0 = window.scrollY;
-    var windowScroll1 = window.scrollYOffset;
-    if (windowScroll0 > 300 || windowScroll1 > 300) {
+    if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
         gotoAbout();
     } else {
         gotoHome();
