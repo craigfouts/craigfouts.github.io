@@ -3,7 +3,13 @@ window.highlightLink = true;
 window.showingNav = false;
 
 window.onload = function() {
-    window.scrollTo({top: 0, left: 0, behavior: 'smooth'});
+    // window.scrollTo({top: 0, left: 0, behavior: 'smooth'});
+    var windowScroll = window.scrollY;
+    if (windowScroll > 300) {
+        gotoAbout();
+    } else {
+        gotoHome();
+    }
 }
 
 window.onscroll = function() {
