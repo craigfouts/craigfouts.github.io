@@ -57,7 +57,7 @@ function gotoPage(pg) {
     navDrop.style.opacity = "0";
     window.highlightLink = false;
     window.showingNav = false;
-    page.scrollIntoView(true);
+    page.scrollIntoView({behavior: "smooth"});
 }
 
 function toggleNav() {
