@@ -1,6 +1,7 @@
 window.currentLink = "home-link";
 window.highlightLink = true;
 window.showingNav = false;
+window.autoScrolling = false;
 
 window.onload = function() {
     window.location = "#home-page"
@@ -15,9 +16,15 @@ window.onscroll = function() {
     navDrop.style.opacity = 0;
     window.showingNav = false;
     if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+        if (window.autoScrolling == false) {
+            window.location = "#about-page";
+        }
         gotoAbout()
     } 
     else {
+        if (window.autoScrolling == false) {
+            window.location = "#home-page";
+        }
         gotoHome()
     }
     if (window.highlightLink == true) {
@@ -54,13 +61,14 @@ function gotoPage() {
     navBtn.style.color = "#ccc";
     navDrop.style.pointerEvents = "none";
     navDrop.style.opacity = "0";
+    window.highlightLink = false;
+    window.showingNav = false;
+    window.autoScrolling = true;
     switch (window.currentLink) {
         case "about-link":
             gotoAbout();
             break;
     }
-    window.highlightLink = false;
-    window.showingNav = false;
 }
 
 function toggleNav() {
