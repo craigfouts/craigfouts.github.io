@@ -3,8 +3,16 @@ window.highlightLink = true;
 window.showingNav = false;
 
 window.onload = function() {
+    var windowScroll = window.scrollY;
     var homePage = document.getElementById("home-page");
-    homePage.scrollIntoView(true);
+    var aboutPage = document.getElementById("about-page");
+    if (windowScroll > 300) {
+        aboutPage.scrollIntoView({behavior: "smooth"});
+        gotoAbout();
+    } else {
+        homePage.scrollIntoView({behavior: "smooth"});
+        gotoHome();
+    }
 }
 
 window.onscroll = function() {
@@ -15,10 +23,9 @@ window.onscroll = function() {
     navDrop.style.opacity = 0;
     window.showingNav = false;
     if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
-        gotoAbout()
-    } 
-    else {
-        gotoHome()
+        gotoAbout();
+    } else {
+        gotoHome();
     }
     if (window.highlightLink == true) {
         reset();
