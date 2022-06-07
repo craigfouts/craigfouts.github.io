@@ -45,6 +45,7 @@ function gotoAbout() {
     navBar.style.backgroundColor = "#000";
     homeLink.style.pointerEvents = "auto";
     homeLink.style.opacity = "1";
+    document.getElementById("about-page").style.opacity = "1";
     setOpacity("0", "0", "1");
     window.currentLink = "about-link";
     window.highlightLink = true;
