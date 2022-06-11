@@ -2,7 +2,7 @@ window.currentLink = "home-link";
 window.highlightLink = true;
 window.showingNav = false;
 
-window.onload = function() {
+window.onload = window.onresize = function() {
     showPage();
 }
 
@@ -12,12 +12,8 @@ window.onscroll = function() {
     navBtn.style.color = "#ccc";
     navDrop.style.pointerEvents = "none";
     navDrop.style.opacity = 0;
+    showPage();
     window.showingNav = false;
-    if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
-        showAbout();
-    } else {
-        showHome();
-    }
     if (window.highlightLink == true) {
         reset();
     }
