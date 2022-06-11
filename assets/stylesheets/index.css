@@ -52,9 +52,9 @@ body, html {
 	transition: .25s;
 }
 
-/* #home-link:hover {
-	color: #f00;
-} */
+#home-link:hover {
+	color: #666;
+}
 
 #home-page {
 	background-attachment: fixed;
