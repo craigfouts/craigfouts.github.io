@@ -3,11 +3,7 @@ window.highlightLink = true;
 window.showingNav = false;
 
 window.onload = function() {
-    if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
-        showAbout();
-    } else {
-        showHome();
-    }
+    showPage();
 }
 
 window.onscroll = function() {
@@ -47,6 +43,14 @@ function gotoPage(pg) {
     }
 }
 
+function showPage() {
+    if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+        showAbout();
+    } else {
+        showHome();
+    }
+}
+
 function showHome() {
     var navBar = document.getElementById("nav-bar");
     var homeLink = document.getElementById("home-link");
@@ -73,8 +77,8 @@ function showAbout() {
 
 function toggleNav() {
     if (window.showingNav == true) {
-        closeNav()
-        setOpacity("0.15", "1", "1");
+        closeNav();
+        showPage();
         window.showingNav = false;
     } else {
         openNav();
