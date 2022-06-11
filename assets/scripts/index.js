@@ -4,9 +4,9 @@ window.showingNav = false;
 
 window.onload = function() {
     if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
-        gotoAbout();
+        showAbout();
     } else {
-        gotoHome();
+        showHome();
     }
 }
 
@@ -18,9 +18,9 @@ window.onscroll = function() {
     navDrop.style.opacity = 0;
     window.showingNav = false;
     if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
-        gotoAbout();
+        showAbout();
     } else {
-        gotoHome();
+        showHome();
     }
     if (window.highlightLink == true) {
         reset();
@@ -39,15 +39,15 @@ function gotoPage(pg) {
     page.scrollIntoView({behavior: "smooth"});
     switch (pg) {
         case "home-page":
-            gotoHome();
+            showHome();
             break;
         case "about-page":
-            gotoAbout();
+            showAbout();
             break;
     }
 }
 
-function gotoHome() {
+function showHome() {
     var navBar = document.getElementById("nav-bar");
     var homeLink = document.getElementById("home-link");
     navBar.className = navBar.className.replace("w3-card", "");
@@ -58,7 +58,7 @@ function gotoHome() {
     window.currentLink = "home-link";
 }
 
-function gotoAbout() {
+function showAbout() {
     var navBar = document.getElementById("nav-bar");
     var homeLink = document.getElementById("home-link");
     navBar.className = "w3-bar" + " w3-card";
