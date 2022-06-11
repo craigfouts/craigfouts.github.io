@@ -27,6 +27,26 @@ window.onscroll = function() {
     }
 }
 
+function gotoPage(pg) {
+    var navBtn = document.getElementById("nav-btn");
+    var navDrop = document.getElementById("nav-drop");
+    var page = document.getElementById(pg);
+    navBtn.style.color = "#ccc";
+    navDrop.style.pointerEvents = "none";
+    navDrop.style.opacity = "0";
+    window.highlightLink = false;
+    window.showingNav = false;
+    page.scrollIntoView({behavior: "smooth"});
+    switch (pg) {
+        case "home-page":
+            gotoHome();
+            break;
+        case "about-page":
+            gotoAbout();
+            break;
+    }
+}
+
 function gotoHome() {
     var navBar = document.getElementById("nav-bar");
     var homeLink = document.getElementById("home-link");
@@ -49,26 +69,6 @@ function gotoAbout() {
     setOpacity("0", "0", "1");
     window.currentLink = "about-link";
     window.highlightLink = true;
-}
-
-function gotoPage(pg) {
-    var navBtn = document.getElementById("nav-btn");
-    var navDrop = document.getElementById("nav-drop");
-    var page = document.getElementById(pg);
-    navBtn.style.color = "#ccc";
-    navDrop.style.pointerEvents = "none";
-    navDrop.style.opacity = "0";
-    window.highlightLink = false;
-    window.showingNav = false;
-    page.scrollIntoView({behavior: "smooth"});
-    switch (pg) {
-        case "home-page":
-            gotoHome();
-            break;
-        case "about-page":
-            gotoAbout();
-            break;
-    }
 }
 
 function toggleNav() {
