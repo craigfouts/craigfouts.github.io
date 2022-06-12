@@ -3,6 +3,7 @@ window.highlightLink = true;
 window.showingNav = false;
 
 window.onload = window.onresize = function() {
+    closeNav();
     showPage();
 }
 
