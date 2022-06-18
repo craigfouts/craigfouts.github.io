@@ -90,7 +90,7 @@ body, html {
 	padding-top: 150px;
 	margin-bottom: 25%;
 	opacity: 0;
-	transition: .25s;
+	transition: .5s;
 }
 
 #profile-desc {

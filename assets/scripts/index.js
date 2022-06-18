@@ -32,34 +32,34 @@ function gotoPage(pg) {
     page.scrollIntoView({behavior: "smooth"});
     switch (pg) {
         case "home-page":
-            showHome();
+            showHome("0.5");
             break;
         case "about-page":
-            showAbout();
+            showAbout("0.5");
             break;
     }
 }
 
 function showPage() {
     if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
-        showAbout();
+        showAbout("0.25");
     } else {
-        showHome();
+        showHome("0.25");
     }
 }
 
-function showHome() {
+function showHome(t) {
     var navBar = document.getElementById("nav-bar");
     var homeLink = document.getElementById("home-link");
     navBar.className = navBar.className.replace("w3-card", "");
     navBar.style.backgroundColor = "transparent";
     homeLink.style.pointerEvents = "none";
     homeLink.style.opacity = "0";
-    setOpacity("0.15", "1", "0");
+    setOpacity("0.15", "1", "0", t);
     window.currentLink = "home-link";
 }
 
-function showAbout() {
+function showAbout(t) {
     var navBar = document.getElementById("nav-bar");
     var homeLink = document.getElementById("home-link");
     navBar.className = "w3-bar" + " w3-card";
@@ -67,7 +67,7 @@ function showAbout() {
     homeLink.style.pointerEvents = "auto";
     homeLink.style.opacity = "1";
     document.getElementById("about-page").style.opacity = "1";
-    setOpacity("0", "0", "1");
+    setOpacity("0", "0", "1", t);
     window.currentLink = "about-link";
     window.highlightLink = true;
 }
@@ -100,10 +100,16 @@ function closeNav() {
     navDrop.style.opacity = "0";
 }
 
-function setOpacity(bv, bl, ap) {
+function setOpacity(bv, bl, ap, t) {
     var bannerVid = document.getElementById("banner-vid");
     var bannerLogo = document.getElementById("banner-logo");
     var aboutPage = document.getElementById("about-page");
+    bannerVidTransition = bannerVid.style.transition;
+    bannerLogoTransition = bannerLogo.style.transition;
+    aboutPageTransition = aboutPage.style.transition;
+    bannerVid.style.transition = t;
+    bannerLogo.style.transition = t;
+    aboutPage.style.transition = t;
     switch (window.currentLink) {
         case "home-link":
             bannerVid.style.opacity = bv;
@@ -113,6 +119,9 @@ function setOpacity(bv, bl, ap) {
             aboutPage.style.opacity = ap;
             break;
     }
+    bannerVid.style.transition = bannerVidTransition;
+    bannerLogo.style.transition = bannerLogoTransition;
+    aboutPage.style.transition = aboutPageTransition;
 }
 
 function highlight(id) {
