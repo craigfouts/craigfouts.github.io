@@ -111,7 +111,7 @@ function closeNav() {
     navDrop.style.opacity = "0";
 }
 
-function setOpacity(bv, bl, ap, t) {
+function setOpacity(bv, bl, ap, t) {  // FIXME: This is called way too much
     var bannerVid = document.getElementById("banner-vid");
     var bannerLogo = document.getElementById("banner-logo");
     var aboutPage = document.getElementById("about-page");
