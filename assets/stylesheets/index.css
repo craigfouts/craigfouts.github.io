@@ -88,13 +88,116 @@ body, html {
 
 #about-page {
 	padding-top: 150px;
-	margin-bottom: 25%;
+	margin-bottom: 15%;
 	opacity: 0;
 	transition: .5s;
 }
 
 #profile-desc {
-	font-size: 20px;
+	margin-top: 0px;
+	font-size: 21px;
+	/* font-size: 1.4vw; */
+	text-align: justify;
+}
+
+@media only screen and (max-width: 985px) {
+	#about-page {
+		margin-bottom: 20%;
+	}
+
+	#profile-desc {
+		font-size: 20px;
+	}
+}
+
+@media only screen and (max-width: 945px) {
+	#about-page {
+		margin-bottom: 25%;
+	}
+
+	#profile-desc {
+		font-size: 19px;
+	}
+}
+
+@media only screen and (max-width: 905px) {
+	#about-page {
+		margin-bottom: 30%;
+	}
+
+	#profile-desc {
+		font-size: 18px;
+	}
+}
+
+@media only screen and (max-width: 865px) {
+	#about-page {
+		margin-bottom: 35%;
+	}
+
+	#profile-desc {
+		font-size: 17px;
+	}
+}
+
+@media only screen and (max-width: 825px) {
+	#about-page {
+		margin-bottom: 40%;
+	}
+
+	#profile-desc {
+		font-size: 16px;
+	}
+}
+
+@media only screen and (max-width: 785px) {
+	#about-page {
+		margin-bottom: 45%;
+	}
+
+	#profile-desc {
+		font-size: 15px;
+	}
+}
+
+@media only screen and (max-width: 745px) {
+	#about-page {
+		margin-bottom: 50%;
+	}
+
+	#profile-desc {
+		font-size: 14px;
+	}
+}
+
+@media only screen and (max-width: 705px) {
+	#about-page {
+		margin-bottom: 55%;
+	}
+
+	#profile-desc {
+		font-size: 13px;
+	}
+}
+
+@media only screen and (max-width: 665px) {
+	#about-page {
+		margin-bottom: 60%;
+	}
+
+	#profile-desc {
+		font-size: 12px;
+	}
+}
+
+@media only screen and (max-width: 625px) {
+	#about-page {
+		margin-bottom: 65%;
+	}
+
+	#profile-desc {
+		font-size: 11px;
+	}
 }
 
 @media only screen and (max-width: 600px) {
@@ -103,7 +206,11 @@ body, html {
 	}
 	
 	#about-page {
-		padding-top: 50px;
+		margin-top: 20px;
 		margin-bottom: 0px;
+	}
+
+	#profile-desc {
+		font-size: 19px;
 	}
 }
