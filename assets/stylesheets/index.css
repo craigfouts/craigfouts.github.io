@@ -26,7 +26,7 @@ body, html {
 }
 
 #nav-btn {
-	transition: 0.25s;
+	transition: .25s;
 }
 
 #nav-btn, #home-link {
@@ -53,7 +53,7 @@ body, html {
 	text-decoration: none;
 	opacity: 0;
 	pointer-events: none;
-	transition: .5s;
+	transition: .25s;
 }
 
 #home-link:hover {
@@ -82,14 +82,14 @@ body, html {
 	background-color: transparent;
 	opacity: 0;
 	pointer-events: none;
-	transition: .5s;
+	transition: .25s;
 }
 
 #about-page {
 	padding-top: 150px;
 	margin-bottom: 15%;
 	opacity: 0;
-	transition: .5s;
+	transition: .25s;
 }
 
 #profile-desc {
