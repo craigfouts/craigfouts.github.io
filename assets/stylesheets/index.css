@@ -119,3 +119,9 @@ body, html {
 		font-size: 18px;
 	}
 }
+
+@media only screen and (max-width: 400px) {
+	#profile-desc {
+		font-size: 16px;
+	}
+}
