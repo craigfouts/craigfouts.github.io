@@ -90,12 +90,23 @@ body, html {
 	margin-bottom: 15%;
 	opacity: 0;
 	transition: .25s;
+	pointer-events: none;
 }
 
 #profile-desc {
 	margin-top: 0px;
 	font-size: 21px;
 	text-align: justify;
+}
+
+#profile-desc a {
+	text-decoration: none;
+	color: #666;
+	transition: .25s;
+}
+
+#profile-desc a:hover {
+	color: #990000;
 }
 
 @media only screen and (max-width: 1000px) {

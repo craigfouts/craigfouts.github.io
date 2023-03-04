@@ -36,29 +36,33 @@ function gotoPage(pg) {
     }
     switch (pg) {
         case "home-page":
-            showHome("0.05");
+            showHome("0.25");
             break;
         case "about-page":
-            showAbout("0.05");
+            showAbout("0.25");
             break;
     }
 }
 
 function showPage() {
     if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
-        showAbout("0.05");
+        showAbout("0.25");
     } else {
-        showHome("0.05");
+        showHome("0.25");
     }
 }
 
 function showHome(t) {
     var navBar = document.getElementById("nav-bar");
     var homeLink = document.getElementById("home-link");
+    var bannerVid = document.getElementById("banner-vid");
+    var profileDesc = document.getElementById("profile-desc");
     navBar.className = navBar.className.replace("w3-card", "");
     navBar.style.backgroundColor = "transparent";
     homeLink.style.pointerEvents = "none";
     homeLink.style.opacity = "0";
+    bannerVid.style.zIndex = "0";
+    profileDesc.style.pointerEvents = "none";
     setOpacity("0.15", "1", "0", t);
     window.currentLink = "home-link";
 }
@@ -66,11 +70,14 @@ function showHome(t) {
 function showAbout(t) {
     var navBar = document.getElementById("nav-bar");
     var homeLink = document.getElementById("home-link");
+    var bannerVid = document.getElementById("banner-vid");
+    var profileDesc = document.getElementById("profile-desc");
     navBar.className = "w3-bar" + " w3-card";
     navBar.style.backgroundColor = "#000";
     homeLink.style.pointerEvents = "auto";
     homeLink.style.opacity = "1";
-    document.getElementById("about-page").style.opacity = "1";
+    bannerVid.style.zIndex = "-1";
+    profileDesc.style.pointerEvents = "auto";
     setOpacity("0", "0", "1", t);
     window.currentLink = "about-link";
     window.highlightLink = true;
