@@ -32,10 +32,10 @@ function gotoPage(pg) {
     page.scrollIntoView({behavior: "smooth"});
     switch (pg) {
         case "home-page":
-            showHome("0.5");
+            showHome("0.25");
             break;
         case "about-page":
-            showAbout("0.5");
+            showAbout("0.25");
             break;
     }
 }
