@@ -29,7 +29,11 @@ function gotoPage(pg) {
     navDrop.style.opacity = "0";
     window.highlightLink = false;
     window.showingNav = false;
-    page.scrollIntoView({behavior: "smooth"});
+    if (pg == "home-page" || window.innerWidth > 1000) {
+        page.scrollIntoView({behavior: "smooth"});
+    } else {
+        page.scrollIntoView();
+    }
     switch (pg) {
         case "home-page":
             showHome("0.05");

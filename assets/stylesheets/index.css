@@ -82,7 +82,7 @@ body, html {
 	background-color: transparent;
 	opacity: 0;
 	pointer-events: none;
-	transition: .25s;
+	transition: .5s;
 }
 
 #about-page {
