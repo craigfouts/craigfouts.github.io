@@ -32,19 +32,19 @@ function gotoPage(pg) {
     page.scrollIntoView({behavior: "smooth"});
     switch (pg) {
         case "home-page":
-            showHome("0.25");
+            showHome("0.05");
             break;
         case "about-page":
-            showAbout("0.25");
+            showAbout("0.05");
             break;
     }
 }
 
 function showPage() {
     if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
-        showAbout("0.25");
+        showAbout("0.05");
     } else {
-        showHome("0.25");
+        showHome("0.05");
     }
 }
 
