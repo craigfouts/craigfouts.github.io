@@ -87,7 +87,7 @@ body, html {
 
 #about-page {
 	padding-top: 150px;
-	margin-bottom: 15%;
+	margin-bottom: 40%;
 	opacity: 0;
 	transition: .25s;
 	pointer-events: none;
@@ -107,6 +107,30 @@ body, html {
 
 #profile-desc a:hover {
 	color: #ff0000;
+}
+
+@media only screen and (max-height: 1750px) {
+	#about-page {
+		margin-bottom: 35%;
+	}
+}
+
+@media only screen and (max-height: 1500px) {
+	#about-page {
+		margin-bottom: 30%;
+	}
+}
+
+@media only screen and (max-height: 1250px) {
+	#about-page {
+		margin-bottom: 25%;
+	}
+}
+
+@media only screen and (max-height: 1000px) {
+	#about-page {
+		margin-bottom: 20%;
+	}
 }
 
 @media only screen and (max-width: 1000px) {
