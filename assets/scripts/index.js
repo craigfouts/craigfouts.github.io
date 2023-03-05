@@ -28,12 +28,12 @@ function gotoPage(pg) {
     navDrop.style.pointerEvents = "none";
     navDrop.style.opacity = "0";
     window.highlightLink = false;
-    window.showingNav = false;
-    if (pg == "home-page" || window.innerWidth > 1000) {
-        page.scrollIntoView({behavior: "smooth"});
-    } else {
+    if (window.showingNav) {
         page.scrollIntoView();
+    } else {
+        page.scrollIntoView({behavior: "smooth"});
     }
+    window.showingNav = false;
     switch (pg) {
         case "home-page":
             showHome("0.25");
