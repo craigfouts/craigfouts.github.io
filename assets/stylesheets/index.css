@@ -106,7 +106,7 @@ body, html {
 }
 
 #profile-desc a:hover {
-	color: #990000;
+	color: #ff0000;
 }
 
 @media only screen and (max-width: 1000px) {
