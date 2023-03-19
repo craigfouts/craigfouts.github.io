@@ -34,14 +34,14 @@ function gotoPage(pg) {
         page.scrollIntoView({behavior: "smooth"});
     }
     window.showingNav = false;
-    switch (pg) {
-        case "home-page":
-            showHome("0.25");
-            break;
-        case "about-page":
-            showAbout("0.25");
-            break;
-    }
+    // switch (pg) {
+    //     case "home-page":
+    //         showHome("0.25");
+    //         break;
+    //     case "about-page":
+    //         showAbout("0.25");
+    //         break;
+    // }
 }
 
 function showPage() {

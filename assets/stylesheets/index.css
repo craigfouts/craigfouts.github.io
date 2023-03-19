@@ -86,8 +86,8 @@ body, html {
 }
 
 #about-page {
-	padding-top: 150px;
-	margin-bottom: 40%;
+	height: 100vh;
+	padding-top: 25vh;
 	opacity: 0;
 	transition: .25s;
 	pointer-events: none;
@@ -109,31 +109,11 @@ body, html {
 	color: #ff0000;
 }
 
-@media only screen and (max-height: 1750px) {
-	#about-page {
-		margin-bottom: 35%;
-	}
-}
-
-@media only screen and (max-height: 1500px) {
-	#about-page {
-		margin-bottom: 30%;
-	}
-}
-
-@media only screen and (max-height: 1250px) {
-	#about-page {
-		margin-bottom: 25%;
-	}
-}
-
-@media only screen and (max-height: 1000px) {
-	#about-page {
-		margin-bottom: 20%;
-	}
-}
-
 @media only screen and (max-width: 1000px) {
+	#banner-vid {
+		display: none;
+	}
+
 	#about-page {
 		padding-top: 50px;
 		margin-top: 0px;
@@ -141,15 +121,6 @@ body, html {
 }
 
 @media only screen and (max-width: 600px) {
-	#banner-vid {
-		display: none;
-	}
-	
-	#about-page {
-		margin-top: 20px;
-		margin-bottom: 0px;
-	}
-
 	#profile-desc {
 		font-size: 18px;
 	}
