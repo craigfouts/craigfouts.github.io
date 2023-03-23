@@ -27,25 +27,27 @@ function gotoPage(pg) {
     navBtn.style.color = "#ccc";
     navDrop.style.pointerEvents = "none";
     navDrop.style.opacity = "0";
-    window.highlightLink = false;
     if (window.showingNav) {
         page.scrollIntoView();
+        switch (pg) {
+            case "home-page":
+                showHome("0.25");
+                reset();
+                break;
+            case "about-page":
+                showAbout("0.25");
+                break;
+        }
     } else {
         page.scrollIntoView({behavior: "smooth"});
     }
+    window.highlightLink = false;
     window.showingNav = false;
-    // switch (pg) {
-    //     case "home-page":
-    //         showHome("0.25");
-    //         break;
-    //     case "about-page":
-    //         showAbout("0.25");
-    //         break;
-    // }
+
 }
 
 function showPage() {
-    if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+    if (document.documentElement.scrollTop > 300) {
         showAbout("0.25");
     } else {
         showHome("0.25");

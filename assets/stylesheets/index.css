@@ -87,7 +87,7 @@ body, html {
 
 #about-page {
 	height: 100vh;
-	padding-top: 25vh;
+	padding-top: 30vh;
 	opacity: 0;
 	transition: .25s;
 	pointer-events: none;
