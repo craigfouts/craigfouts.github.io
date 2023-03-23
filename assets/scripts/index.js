@@ -143,7 +143,7 @@ function highlight(id) {
         if (navLinks[i].id == id) {
             navLinks[i].style.color = "#ccc";
         } else {
-            navLinks[i].style.color = "#666";
+            navLinks[i].style.color = "#777";
         }
     }
 }
@@ -157,7 +157,7 @@ function reset() {
             } else if (navLinks[i].id == window.currentLink) {
                 navLinks[i].style.color = "#ccc";
             } else {
-                navLinks[i].style.color = "#666"
+                navLinks[i].style.color = "#777"
             }
         }
     }
