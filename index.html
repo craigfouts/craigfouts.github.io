@@ -1,127 +1,102 @@
 <!DOCTYPE html>
-<html lang="en-US">
-<head>
-    <meta charset="UTF-8">
-    <meta name="author" content="Craig Fouts">
-    <meta name="description" content="My virtual CV and project repository">
-    <meta name="keywords" content="Craig, William, Fouts, Statistics, Applied,
-    Mathematics, Math, Computer Science, Engineering, Visiting, Scientist,
-    Student, Research, Assistant, Laboratory, Researcher, Columbia, Ohio, State,
-    University, OSU, Artificial Life, Intelligence, ALIFE, Isotropic, Steerable,
-    Neural, Cellular, Automata, NCA">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="assets/stylesheets/index.css">
-    <script src="assets/scripts/index.js"></script>
-    <link rel="shortcut icon" href="assets/icons/icon.png" type="image/gif">
-    <title>Craig Fouts</title>
-</head>
-<body>
-    <!-- Navbar -->
-    <div class="w3-top">
-        <!-- Big screen -->
-        <div id="nav-bar" class="w3-bar">
-            <span id="nav-btn" class="w3-bar-item w3-hide-large w3-right 
-                w3-animate-opacity" onclick="toggleNav()">
-                <i class="fa fa-bars w3-large"></i>
-            </span>
-            <span id="merch-link" class="nav-link w3-hide-small 
-                w3-hide-medium w3-animate-opacity w3-right"
-                onmouseover="highlight('merch-link')" onmouseout="reset()">
-                MERCH
-            </span>
-            <span id="connect-link" class="nav-link w3-hide-small 
-                w3-hide-medium w3-animate-opacity w3-right"
-                onmouseover="highlight('connect-link')" onmouseout="reset()">
-                CONNECT
-            </span>
-            <span id="publications-link" class="nav-link w3-hide-small 
-                w3-hide-medium w3-animate-opacity w3-right" 
-                onmouseover="highlight('publications-link')" onmouseout="reset()">
-                PUBLICATIONS
-            </span>
-            <span id="portfolio-link" class="nav-link w3-hide-small 
-                w3-hide-medium w3-animate-opacity w3-right"
-                onmouseover="highlight('portfolio-link')" onmouseout="reset()">
-                PORTFOLIO
-            </span>
-            <span id="about-link" class="nav-link w3-hide-small 
-                w3-hide-medium w3-animate-opacity w3-right" onclick="gotoPage('about-page')"
-                onmouseover="highlight('about-link')" onmouseout="reset()">
-                ABOUT
-            </span>
-            <span id="home-link" class="w3-left" onclick="gotoPage('home-page')">
-                CRAIG FOUTS
-            </span>
-        </div>
 
-        <!-- Small screen -->
-        <div id="nav-drop" class="w3-bar-block w3-hide-large">
-            <span id="about-link" class="nav-link w3-bar-item w3-animate-opacity 
-                w3-center w3-padding" onclick="gotoPage('about-page')"
-                onmouseover="highlight('about-link')" onmouseout="reset()">
-                ABOUT
-            </span>
-            <span id="portfolio-link" class="nav-link w3-bar-item w3-animate-opacity 
-                w3-center w3-padding" 
-                onmouseover="highlight('portfolio-link')" onmouseout="reset()">
-                PORTFOLIO
-            </span>
-            <span id="publications-link" class="nav-link w3-bar-item w3-animate-opacity 
-                w3-center w3-padding"
-                onmouseover="highlight('publications-link')" onmouseout="reset()">
-                PUBLICATIONS
-            </span>
-            <span id="connect-link" class="nav-link w3-bar-item w3-animate-opacity 
-                w3-center w3-padding" 
-                onmouseover="highlight('connect-link')" onmouseout="reset()">
-                CONNECT
-            </span>
-            <span id="merch-link" class="nav-link w3-bar-item w3-animate-opacity 
-                w3-center w3-padding"
-                onmouseover="highlight('merch-link')" onmouseout="reset()">
-                MERCH
-            </span>
-        </div>
-    </div>
-
-    <!-- Home page -->
-    <div id="home-page" class="w3-display-container">
-        <video id="banner-vid" playinline autoplay loop muted>
-            <source src="assets/videos/banner.mp4" type="video/mp4">
-        </video>
-    </div>
-    <div class="w3-center">
-        <span id="banner-logo" class="w3-center w3-padding-large">
-            CRAIG FOUTS
-        </span>
-    </div>
-
-    <!-- About page -->
-    <div class="w3-content w3-container w3-padding-64">
-        <div id="about-page" class="w3-row w3-center">
-            <div class="w3-col m12 l6 w3-center w3-padding-large">
-                <img id="profile-pic" class="w3-round w3-image" src="assets/images/craig-fouts.jpg">
+<html>
+    <head>
+        <title>Craig Fouts</title>
+        <link rel="shortcut icon" href="assets/images/icon.png" type="image/gif">
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
+        <link rel="stylesheet" href="assets/styles/main.css"/>
+    </head>
+    <body class="preload">
+        <div id="wrapper">
+            <header id="header">
+                <div class="content">
+                    <div class="inner">
+                        <h1>Craig Fouts</h1>
+                    </div>
+                </div>
+                <nav>
+                    <ul>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#portfolio">Portfolio</a></li>
+                        <li><a href="#bibliography">Bibligraphy</a></li>
+                        <li><a href="#connect">Connect</a></li>
+                    </ul>
+                </nav>
+            </header>
+            <div id="main">
+                <article id="about">
+                    <h2 class="major">About</h2>
+                    <span class="image main"><img src="assets/images/about.jpeg" alt=""/></span>
+                    <p>
+                        I am a computational scientist / applied mathematician
+                        passionate about probabilistic latent variable models and 
+                        differentiable self-organization in the context of 
+                        biomedical data. Currently, I work as an associate
+                        computational biologist in the New York Genome Center's 
+                        <a href="https://www.vickovictechinnovation.com/" target="_blank">Technology Innovation Laboratory</a>, 
+                        where I help develop statistical machine learning tools 
+                        for genomics research. I also collaborate as a visiting
+                        researcher with the <a href="https://computational-morphogenomics-group.github.io/" target="_blank">Computational Morphogenomics Group</a>
+                        at Columbia University, as well as occasionally with the 
+                        <a href="https://google-research.github.io/self-organising-systems/" target="_blank">Self-Organizing Systems Group</a>
+                        at Google Research. Previously, I received my master's 
+                        in applied mathematics from Columbia University after 
+                        studying computer science and mathematics at The Ohio 
+                        State University. Outside of research, I enjoy inline 
+                        skating, skiing, scuba diving, playing the lyre harp, 
+                        and building <a href="#portfolio">cool stuff</a>.
+                    </p>
+                </article>
+                <article id="portfolio">
+                    <h2 class="major">Portfolio</h2>
+                    <p>
+                        Coming soon :)
+                    </p>
+                </article>
+                <article id="bibliography">
+                    <h2 class="major">Bibliography</h2>
+                    <p>
+                        Coming soon :)
+                    </p>
+                </article>
+                <article id="connect">
+                    <h2 class="major">Connect</h2>
+                    <form method="post" action="#">
+                        <div class="fields">
+                            <div class="field half">
+                                <label for="name">Name</label>
+                                <input type="text" name="name" id="name"/>
+                            </div>
+                            <div class="field half">
+                                <label for="email">Email</label>
+                                <input type="text" name="email" id="email"/>
+                            </div>
+                            <div class="field">
+                                <label for="message">Message</label>
+                                <textarea name="message" id="message" rows="4"></textarea>
+                            </div>
+                        </div>
+                        <ul class="actions">
+                            <li><input type="submit" value="Send Message" class="primary"/></li>
+                            <li><input type="reset" value="Reset"/></li>
+                        </ul>
+                    </form>
+                    <ul class="icons">
+                        <li><a href="https://twitter.com/cwpfautz" class="icon brands fa-twitter" target="_blank"><span class="label">Twitter</span></a></li>
+                        <li><a href="https://www.facebook.com/cwpfautz" class="icon brands fa-facebook-f" target="_blank"><span class="label">Facebook</span></a></li>
+                        <li><a href="https://www.instagram.com/cwpfautz" class="icon brands fa-instagram", target="_blank"><span class="label">Instagram</span></a></li>
+                        <li><a href="https://www.linkedin.com/in/craigwfouts" class="icon brands fa-linkedin-in", target="_blank"><span class="label">LinkedIn</span></a></li>
+                        <li><a href="https://github.com/craigfouts" class="icon brands fa-github" target="_blank"><span class="label">GitHub</span></a></li>
+                    </ul>
+                </article>
             </div>
-            <div class="w3-col l6 w3-center w3-padding-large">
-                <p id="profile-desc">
-                    I am a graduate student in applied math at Columbia
-                    University working as a member of the 
-                    <a href="https://computational-morphogenomics-group.github.io/" target="_blank">
-                    Computational Morphogenomics Group</a> to develop
-                    probabilistic models of self-organizing systems and
-                    morphogenesis. I also work as a visiting researcher at the
-                    New York Genome Center, where I help develop machine
-                    learning tools for genomic research as a member of the
-                    <a href="https://www.vickovictechinnovation.com/" target="_blank">
-                    Technology Innovation Laboratory</a>. Outside of research,
-                    I enjoy skiing, scuba diving, inline/ice skating, and
-                    playing the violin/lyre.
-                </p>
-            </div>
+            <footer id="footer"></footer>
         </div>
-    </div>
-</body>
+        <script src="assets/scripts/jquery.min.js"></script>
+        <script src="assets/scripts/browser.min.js"></script>
+        <script src="assets/scripts/breakpoints.min.js"></script>
+        <script src="assets/scripts/main.js"></script>
+    </body>
 </html>
