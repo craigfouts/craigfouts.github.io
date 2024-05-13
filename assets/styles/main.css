@@ -169,6 +169,7 @@ h1, h2, h3, h4, h5, h6 {
     line-height: 1.5;
     margin: 0 0 1rem 0;
     text-transform: uppercase;
+    text-align: left;
 }
 
 h1.major, h2.major, h3.major, h4.major, h5.major, h6.major {
