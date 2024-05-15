@@ -1,5 +1,4 @@
 (function($) {
-
 	var	$window = $(window),
 		$body = $('body'),
 		$wrapper = $('#wrapper'),
@@ -41,10 +40,8 @@
         $nav_li = $nav.find('li');
 
     if ($nav_li.length % 2 == 0) {
-
         $nav.addClass('use-middle');
         $nav_li.eq( ($nav_li.length / 2) ).addClass('is-middle');
-
     }
 
     var	delay = 325,
