@@ -231,7 +231,7 @@ form.addEventListener('submit', function (event) {
     };
 
     const errors = validate(formValues, constraints);
-    
+
     if (errors) {
         event.preventDefault();
         const errorMessage = Object
@@ -239,7 +239,7 @@ form.addEventListener('submit', function (event) {
             .map(function (fieldValues) {
                 return fieldValues.join(', ')
             })
-            .join("\n");
+            .join('\n');
 
         alert(errorMessage);
     }
