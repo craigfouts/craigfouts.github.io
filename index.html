@@ -172,7 +172,8 @@
                 </article>
                 <article id="connect">
                     <h2 class="major">Connect</h2>
-                    <form method="post">
+                    <form action="assets/scripts/mail.php" method="post">
+                        <? php echo((!empty($errorMessage)) ? $errorMessage : '') ?>
                         <div class="fields">
                             <div class="field half">
                                 <label for="name">Name</label>
@@ -207,5 +208,6 @@
         <script src="assets/scripts/browser.min.js"></script>
         <script src="assets/scripts/breakpoints.min.js"></script>
         <script src="assets/scripts/main.js"></script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/validate.js/0.13.1/validate.min.js"></script>
     </body>
 </html>
