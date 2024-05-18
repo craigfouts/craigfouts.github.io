@@ -29,14 +29,14 @@ if (!empty($_POST)) {
         $allErrors = join('<br />', $errors);
         $errorMessage = "<p style='color: red;'>{$allErrors}</p>";
     } else {
-        $mail = new PHPMailer(true);
+        $mail = new PHPMailer();
         $mail->isSMTP();
         $mail->Host = 'live.smtp.mailtrap.io';
         $mail->SMTPAuth = true;
         $mail->Port = 587;
         $mail->Username = 'api';
         $mail->Password = '66a5276f97d6b0ef2102d7b83d570b6e';
-        $mail->SMTPSecure = 'ssl';
+        $mail->SMTPSecure = 'tls';
         $mail->addAddress('foutscw@gmail.com', 'Me');
         $mail->Subject = 'New message from your website';
 
