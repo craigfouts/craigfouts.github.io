@@ -158,7 +158,8 @@
         var $this = $(this);
             
         $('<div class="close">Close</div>').appendTo($this).on('click', function() {
-            location.hash = ' ';
+            location.hash = '';
+            history.pushState(null, null, ' ');
         });
 
         $this.on('click', function(event) {
@@ -231,7 +232,7 @@ form.addEventListener('submit', function (event) {
     };
 
     const errors = validate(formValues, constraints);
-
+    
     if (errors) {
         event.preventDefault();
         const errorMessage = Object
