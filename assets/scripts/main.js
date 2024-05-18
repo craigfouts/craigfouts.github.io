@@ -5,7 +5,8 @@
 		$header = $('#header'),
 		$footer = $('#footer'),
 		$main = $('#main'),
-		$main_articles = $main.children('article');
+		$main_articles = $main.children('article'),
+        $form = $('#form');
 
     breakpoints({
         xlarge:   [ '1281px',  '1680px' ],
@@ -221,4 +222,26 @@
     showArticle = function(id) {
         location.href = '#' + id;
     }
+
+    $form.on("submit", function(event) {
+        var data = new FormData(this);
+        var from = data.get("name") + ' <' + data.get("email") + '>',
+            subject = "Connection Request",
+            message = data.get("message");
+
+        event.preventDefault();
+        $.ajax({
+            url: "https://formspree.io/f/mbjnbnrl",
+            method: "POST",
+            dataType: "json",
+            data: {
+                from: from,
+                subject: subject, 
+                message: message
+            },
+            dataType: "json"
+        });
+        $form.trigger('reset');
+        alert('Connection sent :)');
+    });
 })(jQuery);
