@@ -239,7 +239,6 @@
                 subject: subject, 
                 message: message
             },
-            dataType: "json"
         });
         $form.trigger('reset');
         alert('Connection sent :)');
