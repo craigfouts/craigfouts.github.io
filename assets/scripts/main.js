@@ -118,7 +118,7 @@
             return;
 
         if (typeof addState != 'undefined' && addState === true)
-            history.pushState(null, null, '#');
+            history.pushState(null, null, ' ');
 
         if (locked) {
             $body.addClass('is-switching');
@@ -216,4 +216,8 @@
         $window.on('load', function() {
             $main._show(location.hash.substr(1), true);
         });
+
+    showArticle = function(id) {
+        location.href = '#' + id;
+    }
 })(jQuery);
