@@ -124,15 +124,6 @@ html {
     }
 }
 
-#background {
-    position: fixed;
-    right: 0;
-    top: 0;
-    min-width: 100%;
-    min-height: 100%;
-    z-index: -100;
-}
-
 body, input, select, textarea {
     color: #ffffff;
     font-family: "Source Sans Pro", sans-serif;
@@ -1075,8 +1066,6 @@ button {
     line-height: calc(2.75rem - 2px);
 }
 
-/* TODO: background */
-
 #wrapper {
     display: -moz-flex;
     display: -webkit-flex;
@@ -1122,6 +1111,26 @@ button {
     #wrapper {
         padding: 1rem;
     }
+}
+
+#alert {
+    display: -moz-flex;
+    display: -webkit-flex;
+    display: -ms-flex;
+    display: flex;
+    position: absolute;
+    justify-content: center;
+    opacity: 0;
+    z-index: 1;
+}
+
+#background {
+    position: fixed;
+    right: 0;
+    top: 0;
+    min-width: 100%;
+    min-height: 100%;
+    z-index: -100;
 }
 
 #header {

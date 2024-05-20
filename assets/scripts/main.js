@@ -241,6 +241,9 @@
             },
         });
         $form.trigger('reset');
-        alert('Connection sent :)');
+        $('#alert').animate({opacity: 1}, 325);
+        setTimeout(function() {
+            $('#alert').animate({opacity: 0}, 325);
+        }, 1950);
     });
 })(jQuery);
