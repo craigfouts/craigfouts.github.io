@@ -1400,6 +1400,7 @@ body.preload #header .content .inner {
     border-radius: 4px;
     opacity: 0;
     text-align: justify;
+    /* word-spacing:-1.5px; */
 }
 
 #main article.active {
