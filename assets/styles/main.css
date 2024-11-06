@@ -88,7 +88,8 @@ html {
 }
 
 body {
-    background: #1b1f22;
+    /* background: #1b1f22; */
+    background: #2f363b;
 }
 
 body.preload *, body.preload *:before, body.preload *:after {
@@ -145,7 +146,7 @@ a {
 
 a:hover {
     /* border-bottom-color: transparent; */
-    color: #ffffff;
+    color: #f44336;
 }
 
 strong, b {
@@ -174,7 +175,7 @@ h1, h2, h3, h4, h5, h6 {
 
 h1.major, h2.major, h3.major, h4.major, h5.major, h6.major {
     font-weight: 600;
-    /* border-bottom: solid 1px #1b1f22; */
+    border-bottom: solid 1px #1b1f22;
     width: -moz-max-content;
     width: -webkit-max-content;
     width: -ms-max-content;
@@ -1395,11 +1396,11 @@ body.preload #header .content .inner {
     position: relative;
     width: 40rem;
     max-width: 100%;
-    background-color: rgba(27, 31, 34, 0);
-    /* background-color: #1b1f22; */
+    /* background-color: rgba(27, 31, 34, 0); */
+    background-color: #1b1f22;
     border-radius: 4px;
     opacity: 0;
-    text-align: justify;
+    /* text-align: justify; */
     /* word-spacing:-1.5px; */
 }
 
