@@ -1400,7 +1400,7 @@ body.preload #header .content .inner {
     background-color: #1b1f22;
     border-radius: 4px;
     opacity: 0;
-    /* text-align: justify; */
+    text-align: justify;
     /* word-spacing:-1.5px; */
 }
 
