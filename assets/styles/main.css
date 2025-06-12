@@ -146,7 +146,8 @@ a {
 
 a:hover {
     /* border-bottom-color: transparent; */
-    color: #f44336;
+    /* color: #f44336; */
+    color: #E34234;
 }
 
 strong, b {
